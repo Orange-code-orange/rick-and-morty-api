@@ -7,13 +7,24 @@ function SearchForm({ setSearch }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const value = +inputRef.current.value.trim();
+		console.log(value);
+
+		setError('');
 
 		if (!value) {
 			setError('Please enter a valid ID');
 			return;
+		} else if (isNaN(value)) {
+			setError('Please enter a valid number');
+			return;
+		} else if (value < 1 || value > 126) {
+			setError('You must provide a number between 1 and 126');
+			return;
 		}
+
 		console.log('done');
-		setSearch(inputRef.current.value);
+		setSearch(value);
+		inputRef.current.value = '';
 	};
 	return (
 		<div>
