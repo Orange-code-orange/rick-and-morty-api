@@ -7,7 +7,7 @@ function ResidentsList({ residents }) {
 			{residents?.length > 0 ? (
 				<>
 					{residents.map((resident) => (
-						<ResidentCard url={resident} />
+						<ResidentCard key={resident} url={resident} />
 					))}
 				</>
 			) : (
