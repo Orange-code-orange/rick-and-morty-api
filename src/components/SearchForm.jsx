@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 function SearchForm({ setSearch }) {
-	const handleSubmit = () => {};
+	const inputRef = useRef();
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+	};
 	return (
 		<div>
-			<form onSubmit={handleSubmit}>SearchForm</form>
+			<form onSubmit={handleSubmit}>
+				<input type="text" />
+				<button>Search</button>
+			</form>
 		</div>
 	);
 }
