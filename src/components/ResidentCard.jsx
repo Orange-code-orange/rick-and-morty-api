@@ -8,14 +8,14 @@ function ResidentCard({ url }) {
 		request(url);
 	}, [url]);
 
-	useEffect(() => {
-		console.log(resident);
-	}, [resident]);
+	// useEffect(() => {
+	// 	console.log(resident);
+	// }, [resident]);
 
 	const status = {
 		Alive: '🟢',
 		Dead: '🔴',
-		unknown: '⚪',
+		unknown: '⚫',
 	};
 
 	const episodesCount = resident?.episode.length;
