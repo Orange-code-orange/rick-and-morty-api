@@ -3,10 +3,13 @@ import React from 'react';
 function LocationCard({ location }) {
 	const populationCount = location?.residents?.length;
 	const countText = populationCount === 1 ? 'Resident' : 'residents';
+	const locationId = location.id.toString().padStart(3, '0');
 
 	return (
-		<div>
-			<h2>{location?.name}</h2>
+		<div className="location-card">
+			<h2>
+				{location?.name} #{locationId}
+			</h2>
 			<ul>
 				<li>
 					Type: <span>{location?.type}</span>
