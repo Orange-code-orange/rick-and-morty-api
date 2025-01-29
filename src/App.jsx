@@ -33,7 +33,9 @@ function App() {
 					<SearchForm setSearch={setSearch} />
 				</header>
 				{pending ? <p>Loading...</p> : data && <LocationCard location={data} />}
-				<ResidentsList residents={data?.residents} />
+				<main className="app-main">
+					<ResidentsList residents={data?.residents} />
+				</main>
 			</div>
 		</>
 	);

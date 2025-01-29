@@ -1,8 +1,12 @@
 .app-container {
 	width: 100vw;
-	height: 70vh;
+	height: 100vh;
 	background: url('https://images7.alphacoders.com/133/thumb-1920-1335145.jpg'),
-		linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0));
+		linear-gradient(
+			rgba(255, 255, 255, 0),
+			rgba(0, 0, 0, 0.577),
+			rgb(0, 0, 0) 85%
+		);
 	background-size: cover;
 	background-blend-mode: overlay;
 	border-color: transparent;
@@ -21,9 +25,23 @@
 
 .logo-container {
 	display: grid;
-	grid-template-rows: 60% 40%;
+	height: 160px;
+	grid-template-rows: 70% 30%;
 	.logo-img {
 		width: 300px;
+		grid-row: 1 / 2;
+		filter: drop-shadow(0 0 0.75rem #ffffff);
 	}
-	filter: drop-shadow(0 0 0.75rem #ffffff);
+
+	.logo-subtitle {
+		font-size: 1.5rem;
+		text-align: center;
+		width: 90px;
+		grid-row: 2 / 3;
+		color: #000000;
+		align-self: flex-end;
+		justify-self: end;
+		background-color: rgb(255, 255, 255);
+		rotate: -10deg;
+	}
 }
