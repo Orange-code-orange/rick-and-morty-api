@@ -27,13 +27,8 @@ function App() {
 			<div className="app-container">
 				<header className="app-header">
 					<div className="logo-container">
-						<img
-							src={logo}
-							alt="logo"
-							style={{ width: '300px' }}
-							className="logo-img"
-						/>
-						<h2>WIKI</h2>
+						<img src={logo} alt="logo" className="logo-img" />
+						<h2 className="logo-subtitle">WIKI</h2>
 					</div>
 					<SearchForm setSearch={setSearch} />
 				</header>
