@@ -3,10 +3,46 @@
 	-webkit-backdrop-filter: blur(10px); /* Efecto vidrio esmerilado */
 	backdrop-filter: blur(10px); /* Efecto vidrio esmerilado */
 	border-radius: 12px;
-	padding: 16px;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	color: white; /* Asegura que el texto contraste */
 	width: 300px;
 	font-family: Arial, sans-serif;
 	border: none;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.location-name {
+	text-transform: uppercase;
+	font-size: 16px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.712);
+	justify-self: center;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	margin: 0;
+}
+
+.location-info {
+	list-style: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0;
+}
+
+.location-info-item {
+	font-size: 14px;
+	font-weight: bold;
+	color: #7a7b7f;
+}
+
+.item-response {
+	font-size: 17px;
+
+	color: #e6e6e6;
 }

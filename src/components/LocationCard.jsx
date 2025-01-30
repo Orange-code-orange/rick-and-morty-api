@@ -8,19 +8,20 @@ function LocationCard({ location }) {
 
 	return (
 		<div className="location-card">
-			<h2>
+			<h2 className="location-name">
 				{location?.name} #{locationId}
 			</h2>
-			<ul>
-				<li>
-					Type: <span>{location?.type}</span>
+			<ul className="location-info">
+				<li className="location-info-item">
+					Type: <br /> <span className="item-response">{location?.type}</span>
 				</li>
-				<li>
-					Dimension: <span>{location?.dimension}</span>
+				<li className="location-info-item">
+					Dimension: <br />
+					<span className="item-response">{location?.dimension}</span>
 				</li>
-				<li>
-					Population:{' '}
-					<span>
+				<li className="location-info-item">
+					Population: <br />
+					<span className="item-response">
 						{populationCount} {countText}
 					</span>
 				</li>

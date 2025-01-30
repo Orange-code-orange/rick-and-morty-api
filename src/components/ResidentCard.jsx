@@ -40,15 +40,15 @@ function ResidentCard({ url }) {
 
 						<div>
 							<h3>{resident.name}</h3>
-							<ul>
-								<li>
+							<ul className="resident-info">
+								<li className="resident-info-item">
 									Specie: <span>{resident.species}</span>
 								</li>
-								<li>
+								<li className="resident-info-item">
 									Origin: <span>{resident.origin?.name}</span>
 								</li>
-								<li>
-									Episodes where appear:{' '}
+								<li className="resident-info-item">
+									Appear in:
 									<span>
 										{episodesCount} {countText}
 									</span>

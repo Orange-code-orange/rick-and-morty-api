@@ -54,11 +54,14 @@
 	}
 }
 .main-container {
+	padding-bottom: 60px;
+	height: auto;
+
 	width: 100vw;
 	background-color: rgb(1, 0, 0);
 	display: flex;
 	justify-content: center;
-	margin-top: -1px;
+	margin-top: -50px;
 }
 
 .cards-container {
@@ -68,5 +71,4 @@
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-column-gap: 12px;
 	grid-row-gap: 50px;
-	margin-top: -80px;
 }
