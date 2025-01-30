@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import useFetchApi from '../hooks/useFetchApi';
+import './ResidentCard.css';
 
 function ResidentCard({ url }) {
 	const { data: resident, pending, error, request } = useFetchApi();
@@ -7,10 +8,6 @@ function ResidentCard({ url }) {
 	useEffect(() => {
 		request(url);
 	}, [url]);
-
-	// useEffect(() => {
-	// 	console.log(resident);
-	// }, [resident]);
 
 	const status = {
 		Alive: '🟢',
@@ -22,16 +19,25 @@ function ResidentCard({ url }) {
 	const countText = episodesCount > 1 ? 'Episodes' : 'Episode';
 
 	return (
-		<div>
+		<>
 			{pending ? (
 				<p>Cargando...</p>
 			) : (
 				resident && (
-					<>
-						<div>
-							<img src={resident.image} alt="" width={250} />
-							<span>{`${status[resident.status]} ${resident.status}`}</span>
+					<div className="resident-card">
+						<div
+							className="image-container"
+							style={{
+								backgroundImage: `url(${resident.image})`,
+								backgroundSize: 'cover',
+								backgroundPosition: 'center',
+							}}
+						>
+							<span className="status">{`${status[resident.status]} ${
+								resident.status
+							}`}</span>
 						</div>
+
 						<div>
 							<h3>{resident.name}</h3>
 							<ul>
@@ -42,17 +48,17 @@ function ResidentCard({ url }) {
 									Origin: <span>{resident.origin?.name}</span>
 								</li>
 								<li>
-									Eppisodes where appear:{' '}
+									Episodes where appear:{' '}
 									<span>
 										{episodesCount} {countText}
 									</span>
 								</li>
 							</ul>
 						</div>
-					</>
+					</div>
 				)
 			)}
-		</div>
+		</>
 	);
 }
 

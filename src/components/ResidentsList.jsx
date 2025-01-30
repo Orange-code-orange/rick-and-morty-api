@@ -3,7 +3,7 @@ import ResidentCard from './ResidentCard';
 
 function ResidentsList({ residents }) {
 	return (
-		<div>
+		<>
 			{residents?.length > 0 ? (
 				<>
 					{residents.map((resident) => (
@@ -13,7 +13,7 @@ function ResidentsList({ residents }) {
 			) : (
 				<p>No hay residentes</p>
 			)}
-		</div>
+		</>
 	);
 }
 

@@ -25,16 +25,20 @@ function App() {
 	return (
 		<>
 			<div className="app-container">
-				<header className="app-header">
-					<div className="logo-container">
-						<img src={logo} alt="logo" className="logo-img" />
-						<h2 className="logo-subtitle">WIKI</h2>
-					</div>
-					<SearchForm setSearch={setSearch} />
-				</header>
+				<div className="app-background">
+					<header className="app-header">
+						<div className="logo-container">
+							<img src={logo} alt="logo" className="logo-img" />
+							<h2 className="logo-subtitle">WIKI</h2>
+						</div>
+						<SearchForm setSearch={setSearch} />
+					</header>
+				</div>
 				{pending ? <p>Loading...</p> : data && <LocationCard location={data} />}
-				<main className="cards-container">
-					<ResidentsList residents={data?.residents} />
+				<main className="main-container">
+					<div className="cards-container">
+						<ResidentsList residents={data?.residents} />
+					</div>
 				</main>
 			</div>
 		</>
