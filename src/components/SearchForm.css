@@ -1,0 +1,20 @@
+.search-form {
+	margin-top: 60px;
+	margin-bottom: 50px;
+}
+
+.search-input {
+	height: 24px;
+	border: none;
+	border-radius: 6px 0 0 6px;
+	outline: none;
+}
+
+.search-button {
+	height: 24px;
+	border: none;
+	border-radius: 0 6px 6px 0;
+	background-color: #f0f0f0;
+	cursor: pointer;
+	margin-left: -1px;
+}

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import './SearchForm.css';
 
 function SearchForm({ setSearch }) {
 	const inputRef = useRef();
@@ -27,10 +28,15 @@ function SearchForm({ setSearch }) {
 		inputRef.current.value = '';
 	};
 	return (
-		<div>
+		<div className="search-form">
 			<form onSubmit={handleSubmit}>
-				<input type="text" ref={inputRef} placeholder="Enter a location ID" />
-				<button>Search</button>
+				<input
+					className="search-input"
+					type="text"
+					ref={inputRef}
+					placeholder="Enter a location ID"
+				/>
+				<button className="search-button">Search</button>
 				{error && <p>{error}</p>}
 			</form>
 		</div>

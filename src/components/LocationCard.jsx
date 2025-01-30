@@ -1,4 +1,5 @@
 import React from 'react';
+import './LocationCard.css';
 
 function LocationCard({ location }) {
 	const populationCount = location?.residents?.length;

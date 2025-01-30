@@ -32,9 +32,16 @@ function App() {
 							<h2 className="logo-subtitle">WIKI</h2>
 						</div>
 						<SearchForm setSearch={setSearch} />
+						<div className="location-card-container">
+							{pending ? (
+								<p>Loading...</p>
+							) : (
+								data && <LocationCard location={data} />
+							)}
+						</div>
 					</header>
 				</div>
-				{pending ? <p>Loading...</p> : data && <LocationCard location={data} />}
+
 				<main className="main-container">
 					<div className="cards-container">
 						<ResidentsList residents={data?.residents} />

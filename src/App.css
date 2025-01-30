@@ -15,6 +15,8 @@
 	border-color: transparent;
 	background-position: center;
 	background-repeat: no-repeat;
+	height: 100vh;
+	min-height: 600px;
 }
 
 .app-header {
@@ -29,9 +31,9 @@
 .logo-container {
 	display: grid;
 	height: 160px;
-	grid-template-rows: 70% 30%;
+	grid-template-rows: 60% 40%;
 	.logo-img {
-		width: 300px;
+		width: 400px;
 		grid-row: 1 / 2;
 		filter: drop-shadow(0 0 0.75rem #ffffff);
 	}
@@ -42,10 +44,10 @@
 		width: 90px;
 		grid-row: 2 / 3;
 		color: #000000;
-		align-self: flex-end;
 		justify-self: end;
 		background-color: rgb(255, 255, 255);
 		rotate: -10deg;
+		height: 35px;
 	}
 }
 .main-container {
@@ -53,6 +55,7 @@
 	background-color: rgb(1, 0, 0);
 	display: flex;
 	justify-content: center;
+	margin-top: -1px;
 }
 
 .cards-container {
