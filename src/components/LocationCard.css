@@ -8,4 +8,5 @@
 	color: white; /* Asegura que el texto contraste */
 	width: 300px;
 	font-family: Arial, sans-serif;
+	border: none;
 }

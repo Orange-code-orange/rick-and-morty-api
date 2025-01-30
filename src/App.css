@@ -24,30 +24,33 @@
 	justify-content: start;
 	align-items: center;
 	flex-direction: column;
-	height: 100vh;
+	height: auto;
 	width: 100vw;
 }
 
 .logo-container {
+	margin: 40px 0 40px 0;
 	display: grid;
 	height: 160px;
 	grid-template-rows: 60% 40%;
 	.logo-img {
-		width: 400px;
+		width: 370px;
 		grid-row: 1 / 2;
 		filter: drop-shadow(0 0 0.75rem #ffffff);
 	}
 
 	.logo-subtitle {
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 		text-align: center;
 		width: 90px;
 		grid-row: 2 / 3;
 		color: #000000;
 		justify-self: end;
 		background-color: rgb(255, 255, 255);
-		rotate: -10deg;
-		height: 35px;
+		rotate: -12deg;
+		height: 40px;
+		margin-top: 27px;
+		margin-right: 12px;
 	}
 }
 .main-container {
@@ -65,4 +68,5 @@
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-column-gap: 12px;
 	grid-row-gap: 50px;
+	margin-top: -80px;
 }
