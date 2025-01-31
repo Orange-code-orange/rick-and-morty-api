@@ -49,10 +49,53 @@
 		background-color: rgb(255, 255, 255);
 		rotate: -12deg;
 		height: 40px;
-		margin-top: 27px;
-		margin-right: 12px;
+		margin-top: 40px; /* Adjusted to align with the increased size of .logo-img */
+		margin-right: 20px; /* Adjusted to align with the increased size of .logo-img */
 	}
 }
+
+/* Media query for larger screens */
+
+@media (min-width: 768px) {
+	.logo-container .logo-img {
+		width: 500px;
+		margin-top: -50px;
+	}
+	.logo-container .logo-subtitle {
+		font-size: 2.5rem;
+		margin-top: 20px;
+		margin-right: 10px;
+		height: 60px;
+		width: 150px;
+	}
+}
+@media (min-width: 1200px) {
+	.logo-container .logo-img {
+		margin-top: -100px;
+		width: 800px;
+	}
+	.logo-container .logo-subtitle {
+		font-size: 60px;
+		margin-top: 70px;
+		margin-right: 30px;
+		height: 90px;
+		width: 210px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.logo-container .logo-img {
+		width: 900px;
+	}
+	.logo-container .logo-subtitle {
+		font-size: 70px;
+		margin-top: 199px;
+		margin-right: 30px;
+		height: 100px;
+		width: 210px;
+	}
+}
+
 .main-container {
 	padding-bottom: 60px;
 	height: auto;

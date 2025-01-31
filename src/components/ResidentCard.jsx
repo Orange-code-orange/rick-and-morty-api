@@ -38,18 +38,24 @@ function ResidentCard({ url }) {
 							}`}</span>
 						</div>
 
-						<div>
-							<h3>{resident.name}</h3>
+						<div className="resident-info-container">
+							<h3 className="resident-name">{resident.name}</h3>
 							<ul className="resident-info">
 								<li className="resident-info-item">
-									Specie: <span>{resident.species}</span>
+									Specie: <br />{' '}
+									<span className="resident-item-response">
+										{resident.species}
+									</span>
 								</li>
 								<li className="resident-info-item">
-									Origin: <span>{resident.origin?.name}</span>
+									Origin: <br />{' '}
+									<span className="resident-item-response">
+										{resident.origin?.name}
+									</span>
 								</li>
 								<li className="resident-info-item">
-									Appear in:
-									<span>
+									Appears in: <br />
+									<span className="resident-item-response">
 										{episodesCount} {countText}
 									</span>
 								</li>

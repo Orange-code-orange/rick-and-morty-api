@@ -8,7 +8,6 @@ function SearchForm({ setSearch }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const value = +inputRef.current.value.trim();
-		console.log(value);
 
 		setError('');
 
@@ -23,13 +22,12 @@ function SearchForm({ setSearch }) {
 			return;
 		}
 
-		console.log('done');
 		setSearch(value);
 		inputRef.current.value = '';
 	};
 	return (
-		<div className="search-form">
-			<form onSubmit={handleSubmit}>
+		<div className="form-container">
+			<form onSubmit={handleSubmit} className="search-form">
 				<input
 					className="search-input"
 					type="text"
@@ -37,7 +35,19 @@ function SearchForm({ setSearch }) {
 					placeholder="Enter a location ID"
 				/>
 				<button className="search-button">Search</button>
-				{error && <p>{error}</p>}
+				{error && (
+					<p
+						style={{
+							paddingLeft: '5px',
+							color: '#ffffff',
+							fontSize: '13px',
+							marginTop: '0.5rem',
+							filter: 'drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.79))',
+						}}
+					>
+						{error}
+					</p>
+				)}
 			</form>
 		</div>
 	);

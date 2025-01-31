@@ -25,3 +25,16 @@ body {
 	overflow-x: hidden;
 	font-size: 16px;
 }
+
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+button {
+	all: unset;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
