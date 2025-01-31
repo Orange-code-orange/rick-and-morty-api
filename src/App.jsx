@@ -6,6 +6,7 @@ import SearchForm from './components/SearchForm';
 import { randomId } from './utils';
 import './App.css';
 import { logo } from './assets/images';
+import Loader from './components/Loader';
 
 const baseUrl = 'https://rickandmortyapi.com/api';
 
@@ -34,6 +35,7 @@ function App() {
 						<SearchForm setSearch={setSearch} />
 						<div className="location-card-container">
 							{pending ? (
+								// <Loader loading={pending} />
 								<p>Loading...</p>
 							) : (
 								data && <LocationCard location={data} />
